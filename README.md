@@ -14,10 +14,13 @@ List of methods
 - GET /apis/rest/{version}/datasources/{database}/info?format=[xml/json/text/csv]
 - GET /apis/rest/{version}/datasources/{database}/records
 - GET /apis/rest/{version}/datasources/{database}/records/list?format=[xml/json/text/csv]&count=x&sort=y
+- GET /apis/rest/{version}/datasources/{database}/records/{id} 
 - GET /apis/rest/{version}/datasources/{database}/records/{id}/content?format=[xml/json/text/csv]
+- GET /apis/rest/{version}/datasources/{database}/records/{id}/attachments
+- GET /apis/rest/{version}/datasources/{database}/records/{id}/attachments/{sid}
+- GET,POST /apis/rest/{version}/search 
 - GET,POST /apis/rest/{version}/datasources/search
-- GET,POST /apis/rest/{version}/datasources/{database}/search?query={query_string}&params    
-- POST /apis/rest/{version}/search              
+- GET,POST /apis/rest/{version}/datasources/{database}/search    
 
 Examples
 ========
