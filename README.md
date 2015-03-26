@@ -1,5 +1,5 @@
-Arkiston resti
-==============
+Archive RESTapi
+===============
 - Arkiston REST-rajapinta antaa lukupääsyn arkiston sisältöihin.
 - Käyttöoikeudet tarkistetaan Oauth / basic -tunnistuksella. Käyttöoikeudet arkiston käyttäjätunnuksien mukaisesti.
 - Jokaisen kutsun mukana on välitettävä api-key
@@ -9,18 +9,22 @@ List of methods
 - GET /apis/rest
 - GET /apis/rest/{version}
 - GET /apis/rest/{version}/datasources
-- GET /apis/rest/{version}/datasources/list?format=[xml/json/text/csv]
+- GET /apis/rest/{version}/datasources/list
 - GET /apis/rest/{version}/datasources/{database}
-- GET /apis/rest/{version}/datasources/{database}/info?format=[xml/json/text/csv]
+- GET /apis/rest/{version}/datasources/{database}/info
 - GET /apis/rest/{version}/datasources/{database}/records
-- GET /apis/rest/{version}/datasources/{database}/records/list?format=[xml/json/text/csv]&count=x&sort=y
+- GET /apis/rest/{version}/datasources/{database}/records/list
 - GET /apis/rest/{version}/datasources/{database}/records/{id} 
-- GET /apis/rest/{version}/datasources/{database}/records/{id}/content?format=[xml/json/text/csv]
+- GET /apis/rest/{version}/datasources/{database}/records/{id}/content
 - GET /apis/rest/{version}/datasources/{database}/records/{id}/attachments
 - GET /apis/rest/{version}/datasources/{database}/records/{id}/attachments/{sid}
 - GET,POST /apis/rest/{version}/search 
 - GET,POST /apis/rest/{version}/datasources/search
 - GET,POST /apis/rest/{version}/datasources/{database}/search    
+
+For info, list & content accept params:
+- format=[xml/json/text/csv]
+For search, params are described seprately.
 
 Examples
 ========
