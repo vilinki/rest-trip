@@ -24,6 +24,7 @@ List of methods
 
 For info, list & content accept params:
 - format=[xml/json/text/csv]
+
 For search, params are described seprately.
 
 Examples
