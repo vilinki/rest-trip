@@ -19,7 +19,7 @@ List of methods
 - POST /apis/rest/{version}/datasources/search  
 - GET /apis/rest/{version}/datasources/{database}/search?query={query_string}&params    
 - POST /apis/rest/{version}/datasources/{database}/search
-- POST /apis/rest/v1.0/search              
+- POST /apis/rest/{version}/search              
 
 Examples
 ========
@@ -169,7 +169,7 @@ Content-Type: application/json
 ```http 
 POST /apis/rest/v1.0/search  HTTP/1.1              
 Content-Type: application/json     
-Content-Length: 35                 
+Content-Length: xxyy                 
 Host: api.arkisto.media.netti                                                 
 {
  "database":"<dbname>",
