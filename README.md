@@ -1,8 +1,8 @@
 Archive RESTapi
 ===============
-- Arkiston REST-rajapinta antaa lukupääsyn arkiston sisältöihin.
-- Käyttöoikeudet tarkistetaan Oauth / basic -tunnistuksella. Käyttöoikeudet arkiston käyttäjätunnuksien mukaisesti.
-- Jokaisen kutsun mukana on välitettävä api-key
+- Archive REST api to give read-access into arhives
+- User auth via Oauth/basic. Accounts&pswds according to archive datasource access.
+- pass api-key with every request
 
 List of methods
 ===============
@@ -186,3 +186,6 @@ Host: api.arkisto.media.netti
  "startindex": "<index>"
 }
 ```
+Responses
+=========
+TBD
