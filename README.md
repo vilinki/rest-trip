@@ -15,6 +15,11 @@ List of methods
 - GET /apis/rest/{version}/datasources/{database}/records
 - GET /apis/rest/{version}/datasources/{database}/records/list?format=[xml/json/text/csv]&count=x&sort=y
 - GET /apis/rest/{version}/datasources/{database}/records/{id}/content?format=[xml/json/text/csv]
+- GET /apis/rest/{version}/datasources/search
+- POST /apis/rest/{version}/datasources/search  
+- GET /apis/rest/{version}/datasources/{database}/search?query={query_string}&params    
+- POST /apis/rest/{version}/datasources/{database}/search
+- POST /apis/rest/v1.0/search              
 
 Examples
 ========
@@ -158,5 +163,20 @@ Content-Type: application/json
       ]                      
     }
   ]
+}
+```
+- POST /apis/rest/v1.0/search
+```http 
+POST /apis/rest/v1.0/search  HTTP/1.1              
+Content-Type: application/json     
+Content-Length: 35                 
+Host: api.arkisto.media.netti                                                 
+{
+ "database":"<dbname>",
+ "ccl":"<ccl querystring>",
+ "sort":"<sort_order>", 
+ "format":"<format_name>",
+ "count":"<count>",
+ "startindex": "<index>"
 }
 ```
