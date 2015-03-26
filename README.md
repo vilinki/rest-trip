@@ -18,7 +18,7 @@ List of methods
 
 Examples
 ========
-GET /apis/rest
+- GET /apis/rest
 ```http
 GET /apis/rest 
 HTTP/1.1 200 OK
