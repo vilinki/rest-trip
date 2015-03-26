@@ -4,8 +4,20 @@ Arkiston resti
 - Käyttöoikeudet tarkistetaan Oauth / basic -tunnistuksella. Käyttöoikeudet arkiston käyttäjätunnuksien mukaisesti.
 - Jokaisen kutsun mukana on välitettävä api-key
 
-Root endpoints
-==============
+List of methods
+===============
+- GET /apis/rest
+- GET /apis/rest/{version}
+- GET /apis/rest/{version}/datasources
+- GET /apis/rest/{version}/datasources/list?format=[xml/json/text/csv]
+- GET /apis/rest/{version}/datasources/{database}
+- GET /apis/rest/{version}/datasources/{database}/info?format=[xml/json/text/csv]
+- GET /apis/rest/{version}/datasources/{database}/records
+- GET /apis/rest/{version}/datasources/{database}/records/list?format=[xml/json/text/csv]&count=x&sort=y
+- GET /apis/rest/{version}/datasources/{database}/records/{id}/content?format=[xml/json/text/csv]
+
+Examples
+========
 GET /apis/rest
 ```http
 GET /apis/rest 
@@ -36,9 +48,6 @@ Content-Type: application/json
   }
 }
 ```
-
-General info
-============
 - GET /apis/rest/v1.0/datasources
 ```http
 GET /apis/rest/v1.0/datasources
@@ -151,8 +160,3 @@ Content-Type: application/json
   ]
 }
 ```
-List of methods
-===============
-- GET /apis/rest/{version}/datasources/{database}/records
-- GET /apis/rest/{version}/datasources/{database}/records/list?format=csv,txt,xml,json&count=x&sort=y
-- GET /apis/rest/{version}/datasources/{database}/records/{id}/content?format=csv,txt,xml,json
