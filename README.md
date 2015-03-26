@@ -6,6 +6,7 @@ Arkiston resti
 
 Root endpoints
 ==============
+GET /apis/rest
 ```http
 GET /apis/rest 
 HTTP/1.1 200 OK
@@ -20,6 +21,7 @@ Content-Type: application/json
   }
 }
 ```
+GET /apis/rest/v1.0
 ```http
 GET /apis/rest/v1.0
 HTTP/1.1 200 OK
@@ -35,8 +37,9 @@ Content-Type: application/json
 }
 ```
 
-Info
-====
+General info
+============
+GET /apis/rest/v1.0/datasources
 ```http
 GET /apis/rest/v1.0/datasources
 HTTP/1.1 200 OK
@@ -62,7 +65,7 @@ Content-Type: application/json
   ]
 }
 ```
-
+GET /apis/rest/v1.0/datasources/list?format=xml
 ```http
 GET /apis/rest/v1.0/datasources/list?format=xml
 HTTP/1.1 200 OK
@@ -100,7 +103,7 @@ Content-Type: text/xml
   </database>
 </response>
 ```
-
+GET /apis/rest/v1.0/datasources/kil1415t
 ```http    
 GET /apis/rest/v1.0/datasources/kil1415t
 HTTP/1.1 200 OK
@@ -124,7 +127,7 @@ Content-Type: application/json
   ]
 }
 ```
-
+GET /apis/rest/v1.0/datasources/kil1415t/info?format=json
 ```http 
 GET /apis/rest/v1.0/datasources/kil1415t/info?format=json
 HTTP/1.1 200 OK
@@ -148,9 +151,8 @@ Content-Type: application/json
   ]
 }
 ```
-
-```http 
-      
+List of methods
+===============
 GET /apis/rest/{version}/datasources/{database}/records
 GET /apis/rest/{version}/datasources/{database}/records/list?format=csv,txt,xml,json&count=x&sort=y
 GET /apis/rest/{version}/datasources/{database}/records/{id}/content?format=csv,txt,xml,json
